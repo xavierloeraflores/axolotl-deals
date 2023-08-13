@@ -4,7 +4,7 @@ import (
 	"github.com/gocolly/colly"
 )
 
-type dealSourcedItem struct {
+type DealSourcedItem struct {
 	Title string `json:"title"`
 	Image string `json:"image"`
 	Link  string `json:"link"`
@@ -13,8 +13,8 @@ type dealSourcedItem struct {
 
 
 
-func getItems() []dealSourcedItem {
-	var items []dealSourcedItem
+func getItems() []DealSourcedItem {
+	var items []DealSourcedItem
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.dealsource.tech"),
 		colly.Async(true),
@@ -25,7 +25,7 @@ func getItems() []dealSourcedItem {
 		image := e.ChildAttr(".summary-thumbnail-image", "data-src")
 		link :=  e.Request.AbsoluteURL(e.ChildAttr(".summary-title-link", "href"))
 
-		i := dealSourcedItem{
+		i := DealSourcedItem{
 			Title: title,
 			Image: image,
 			Link: link,
@@ -41,7 +41,7 @@ func getItems() []dealSourcedItem {
 
 
 func main() {
-	var dealSourcedItems []dealSourcedItem
+	var dealSourcedItems []DealSourcedItem
 	dealSourcedItems = getItems()
 
 	for i := 0;  i< len(dealSourcedItems); i++ {
