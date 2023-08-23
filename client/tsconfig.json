@@ -20,7 +20,7 @@
     "paths": {
       "npm/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
-      "@lib/utils/*": ["./src/utils/*"]
+      "@lib/utils": ["./src/utils"]
     }
   },
   "include": [
