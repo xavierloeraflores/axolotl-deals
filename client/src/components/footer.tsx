@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         </span>
       </MyHoverCard>
       <span className="text-center">
-        Made with Go, Next.js, TRPC, Prisma, and TailwindCSS
+        Made with ❤️ using Go, Next.js, TRPC, Prisma, & TailwindCSS
       </span>
     </footer>
   );
