@@ -3,7 +3,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center justify-center bg-primary p-4 text-primary-foreground">
+    <footer className="flex flex-col items-center justify-center bg-secondary p-4 text-secondary-foreground">
       <Link href="/">
         <span className="m-4 font-bold underline">Axolotl Deals</span>
       </Link>
