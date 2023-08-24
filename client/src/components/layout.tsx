@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "./ui/toaster";
+import Footer from "./footer";
 
 export default function RootLayout({
   children,
@@ -11,7 +12,7 @@ export default function RootLayout({
       <Toaster />
       <header></header>
       {children}
-      <footer></footer>
+      <Footer />
     </ThemeProvider>
   );
 }
