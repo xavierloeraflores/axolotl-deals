@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -25,18 +26,14 @@ export default function Product({
   date,
 }: ProductProps) {
   return (
-    <Card className="max-w-16">
+    <Card className="h-128  w-96 bg-secondary">
+      <Image src={image} alt={title} width={500} height={500} />
       <CardHeader>
-        <CardTitle>
-          <h3>{title}</h3>
-        </CardTitle>
-        <CardDescription>
-          <img src={image} alt={title} />
-        </CardDescription>
+        <CardTitle>{title}</CardTitle>
+        {date && <CardDescription>{date.toLocaleDateString()}</CardDescription>}
       </CardHeader>
       <CardContent>
-        <p>{priceLine}</p>
-        {date && <p>{date.toLocaleDateString()}</p>}
+        <span className="text-lg">{priceLine}</span>
       </CardContent>
       <CardFooter>
         <AffiliateButton link={link} />
